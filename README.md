@@ -15,3 +15,5 @@ Utilisation du script 'config.json' avec clé de l'API.
 Nombreux soucis pour récupérer les informations nécessaires.
 Téléchargement des données prenant environ 60h mais problèmes de connexion suite aux saturations du réseau.
 
+NB : Le dossier node-modules est trop volumineux pour github. Il faut donc, à partir du package.json, refaire les npm install.
+
