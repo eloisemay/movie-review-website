@@ -1,0 +1,23 @@
+extend ../layout
+
+block content
+	.container
+		.row
+			table.table.table-hover.table-bordered
+				thead
+					tr
+						th Nom utilisateur
+						th Temps d'insertion
+						th Vérification
+						th Mise à jour
+						th Suppression
+					tbody
+						each item in genres
+							tr(class="item-id-#{item._id}")
+								td #{item.name}
+								td #{moment(item.meta.createdAt).format('MM/DD/YYYY')}
+								td: a(target="_blank", href="../movie/#{item._id}") Vérification
+								td: a(target="_blank", href="../admin/update/#{item._id}") Mise à jour
+								td
+									button.btn.btn-danger.del(type="button", data-id="#{item._id}") Suppression
+script(src="/js/admin.js")
